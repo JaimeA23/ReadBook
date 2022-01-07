@@ -1,0 +1,145 @@
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="column-contenido">
+  <span>  </span>
+  <div class="spacer"></div>
+
+<form class="Search">
+  <input id="busqueda" type="text" [formControl]="busqueda" placeholder="Search"  style="text-align: center" (keydown.enter)="onSubmit()">
+  <button  type="button" (click)="onSubmit()"><i class="fa fa-search"></i></button>
+  
+</form>
+
+</div>
+
+<img class="loading" src="{{loading}}" alt="" /> 
+<div class="container">
+  
+<div class="row">
+  <div  *ngFor="let card of cards | slice:12*page:12*page+4; let i=index">
+    <a href="/detail?id={{card.id}}">
+    <div class="card">
+         
+          <div class="container">
+            <img
+            src={{card.img}}
+            class="card-img-top"
+            alt={{card.img}}
+          />
+          </div>     
+            <div class="card-body">
+                <div class="column-contenido">
+                    <h4>{{card.title}}</h4>
+                    <span>  </span>
+                    <div class="spacer"></div>
+                    <h5>   $15.55</h5>
+                </div>
+                
+         <h6>
+          {{card.author}}  
+         </h6>
+
+              <div class="lenguajes">
+              
+              <div class="circulo" *ngFor="let cardlen of card.lenguages">
+                <p class="card-text">
+                    {{cardlen}}  
+                     </p>
+              </div>
+            </div>
+            </div>
+        </div>
+    </a>
+  </div>
+
+</div>  
+<div class="row">
+  <div  *ngFor="let card of cards | slice:12*page+4:12*page+8; let i=index">
+    <a href="/detail?id={{card.id}}">
+    <div class="card">
+         
+          <div class="container">
+            <img
+            src={{card.img}}
+            class="card-img-top"
+            alt={{card.img}}
+          />
+          </div>
+            
+            <div class="card-body">
+                  <div class="column-contenido">
+                    <h4>{{card.title}}</h4>
+                    <span>  </span>
+                    <div class="spacer"></div>
+                    <h5>    $15.55</h5>
+                  </div>
+                
+                    <h6>
+                      {{card.author}}  
+                    </h6>
+                        
+                  
+                  <div class="lenguajes">
+                  
+                  <div class="circulo" *ngFor="let cardlen of card.lenguages">
+                    <p class="card-text">
+                        {{cardlen}}  
+                        </p>
+                  </div>
+                  </div>
+            </div>
+        </div>
+      </a>   
+  </div>
+
+</div> 
+<div class="row">
+  <div  *ngFor="let card of cards | slice:12*page+8:12*page+12; let i=index">
+    <a href="/detail?id={{card.id}}">
+        <div class="card">
+         
+          <div class="container">
+            <img
+            src={{card.img}}
+            class="card-img-top"
+            alt={{card.img}}
+          />
+          </div>
+            
+            <div class="card-body">
+                <div class="column-contenido">
+                    <h4>{{card.title}}</h4>
+                    <span>  </span>
+                    <div class="spacer"></div>
+                    <h5>   $15.55</h5>
+                </div>
+                
+         <h6>
+          {{card.author}}  
+         </h6>
+                    
+              
+              <div class="lenguajes">
+              
+              <div class="circulo" *ngFor="let cardlen of card.lenguages">
+                <p class="card-text">
+                    {{cardlen}}  
+                     </p>
+              </div>
+            </div>
+            </div>
+        </div>
+      </a>
+  </div>
+
+</div> 
+<div class="column-contenido">
+  <button type="button" [disabled]="(page == 0) " (click)="preview()">preview</button> 
+  <span>  </span>
+  <div class="spacer"></div>
+  
+<button type="button" [disabled]="(!cards[12*(page+1)]) " (click)="next()">next</button> 
+</div>
+
+</div> 
+

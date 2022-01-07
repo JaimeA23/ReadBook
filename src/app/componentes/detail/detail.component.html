@@ -1,0 +1,51 @@
+<div class="container">
+
+    <div class="row">
+        <div class="card">
+
+
+            <div class="card[0]-body">
+                <div class="column-contenido">
+                    <div class="container">
+                        <img src={{card[0].img}} class="card-img-top" alt={{card[0].img}} />
+                    </div>
+                    
+                    <div class="data">
+                        <h4>{{card[0].title}}</h4>
+                        <h6>
+                            {{card[0].author}}
+                        </h6>
+                        <h5> $15.55</h5>
+                        <div class="lenguajes">
+
+                            <div class="circulo" *ngFor="let cardlen of card[0].lenguages">
+                                <p class="card-text">
+                                    {{cardlen}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <span>  </span>
+                    <div class="spacer"></div>
+                </div>
+                <div class="column-contenido">
+                    <ngb-rating [max]="5" [(rate)]="card[0].starRating" [readonly]="true"></ngb-rating>
+                    <span>  </span>
+                    <div class="spacer"></div>
+                   
+                </div>
+                <h2>Comments</h2>
+                <div  *ngFor="let card of cards | slice:0:2; let i=index">
+                    <div class="commentbox">
+                        <p class="comment">{{card.text}}</p>
+                    </div>
+                    
+                    <p class="autor">{{card.author}}</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+</div>

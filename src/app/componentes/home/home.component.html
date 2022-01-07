@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="banner" role="main">
+   
+
+    <div id="ContactUs" class="column-contenido">
+
+        <div class="textbanner">
+            <h2>{{cards[page].subttitle}}</h2>
+                <h1>{{cards[page].title1}}</h1>
+                <h1>{{cards[page].title2}}</h1>
+                <p>{{cards[page].text}}</p>
+               
+            <button id="btnSubmit" class="button" mat-raised-button type="submit" color="primary">Read More</button>
+        </div>
+        <div class="containerimg">
+            <img src="{{cards[page].img}}" alt="image">
+        </div>
+        
+    </div>
+
+    <div class="botones">
+        <button type="button"><i class="fa fa-chevron-left" (click)="preview()"  ></i></button>
+        <button type="button"><i class="fa fa-chevron-right"(click)="next()" ></i></button>
+    </div>
+</div>

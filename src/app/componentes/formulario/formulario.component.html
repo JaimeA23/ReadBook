@@ -1,0 +1,16 @@
+<h2>Contact Us</h2>
+
+<form id="contactForm" [formGroup]="profileForm" (ngSubmit)="submit()">
+      <input matInput placeholder="Name" formControlName="Name" class="text"  name="Name">
+    <br>
+      <input matInput placeholder="Email" formControlName="Email" class="text"  name="Email">
+    <br>
+      <input matInput placeholder="Phone Number" formControlName="Phone" class="text"  name="Phone">
+    <br>
+      <textarea rows="2"  matInput placeholder="Message" formControlName="Message" class="textzone"  name="Message"></textarea>
+    <br>
+    <button id="btnSubmit" class="button" mat-raised-button type="submit" [disabled]="!profileForm.valid" color="primary">Send</button>
+</form>
+
+
+

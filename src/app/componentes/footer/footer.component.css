@@ -1,0 +1,48 @@
+
+  footer {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    line-height: 20px;
+    background-color: #063547;
+    color: white;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+
+  footer a {
+    display: flex;
+    align-items: center;
+  }
+
+   .row-uno {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    line-height: 20px;
+  }
+
+  .row-uno a {
+    display: flex;
+    align-items: center;
+  }
+
+
+  .contenidocentral {
+    display: flex;
+    align-items:flex-start;
+    line-height: 20px;
+    flex-direction: row;
+    
+    flex: 0 1 60%;
+
+    margin: 10px auto 20px;
+
+    max-width: 960px;
+    
+  }
+
+  .spacer {
+    flex: 0.2;
+  }

@@ -1,0 +1,55 @@
+
+
+
+<div class="toolbar" role="banner">
+
+  <div class="contenidocentral">
+    <div class="spacer"></div>
+
+    <ul fxLayout fxLayoutGap="15px" class="navigation-items">
+     <a href=#Home>Home</a>
+   </ul>
+   <ul fxLayout fxLayoutGap="15px" class="navigation-items">
+     <a href=#product>Products</a>
+   </ul>
+   <ul fxLayout fxLayoutGap="15px" class="navigation-items">
+     <a href=#Blog>Blog</a>
+   </ul>
+   <ul fxLayout fxLayoutGap="15px" class="navigation-items">
+     <a href=#ContactUs>Contact Us</a>
+   </ul>
+   <span>  &nbsp;  &nbsp; &nbsp;   </span>
+   
+  </div>
+
+
+</div>
+
+
+
+<!-- Home -->
+<app-home id="Home" ></app-home>
+
+<router-outlet id="product"></router-outlet>
+
+<div class="content" role="main">
+
+<!-- Blog -->
+<app-blog id="Blog" ></app-blog>
+<!-- Contact Us  -->
+<div id="ContactUs" class="column-contenido"> 
+  <app-formulario class="form" ></app-formulario>
+  <img src="/assets/contact-img.png" alt="image">
+</div>
+
+<span><br></span>
+
+  <!-- about us -->
+  
+  <app-footer ></app-footer>
+
+  
+
+
+
+</div>
