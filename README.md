@@ -1,15 +1,19 @@
-Proyecto de aplicacion de libros en Angular
+Proyecto de aplicación de libros en Angular
 
-Este proyecto fue generado con  with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
+Este proyecto fue generado con  [Angular CLI](https://github.com/angular/angular-cli) versión 13.1.2.
 
-Para su ejecucion use:
+Para cargar paquetes use:
+ `npm install`
+
+
+Para su ejecución use:
  `ng serve`
 
- Podra navegar en `http://localhost:4200/`
- Para ver el desarrollo del elemento opcional se debe dar click sobre uno de los libros indexados
+ Podrá navegar en `http://localhost:4200/`
+ Para ver el desarrollo del elemento opcional se debe dar clic sobre uno de los libros indexados
 
 
- posibles paquetes necesarios:
+ en caso de problemas verficar versión paquetes necesarios:
 
 ├── @angular-devkit/build-angular@13.1.2
 ├── @angular/animations@13.1.1
